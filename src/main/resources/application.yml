@@ -1,0 +1,22 @@
+server:
+  port: 9099
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/geojson
+    username: rashad
+    password:
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-test-query: SELECT 1
+      maximum-pool-size: 10
+      max-lifetime: 600000
+      idle-timeout: 30000
+      pool-name: MyHikariPool
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
